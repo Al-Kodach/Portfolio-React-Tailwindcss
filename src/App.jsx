@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from 'react'
+import React, { useState, useEffect } from 'react'
 import { useLocation } from 'react-router-dom'
 
 import Navbar from "./Components/Navbar"
@@ -11,6 +11,7 @@ import Projects from './Components/Projects'
 
 export default function App() {
   const [menu, setMenu] = useState('close')
+  const [ displayNav, setDisplayNav ] = useState('hidden')
   const [pages, setPages ] = useState([
       {page: <Home />, path: '/'}, 
       {page: <About />, path: '/about'}, 
@@ -18,12 +19,13 @@ export default function App() {
       {page: <Contact />, path: '/contact'} 
   ])
 
-const btnRef = useRef()
+
 const location = useLocation()
 const path = location.pathname
 
 const toggleNav = () => {
-    setMenu(prev => prev === 'close' ? 'open' : 'close')     
+    setMenu( prev => prev === 'close' ? 'open' : 'close' )
+    setDisplayNav( prev => prev === 'hidden' ? 'block' : 'hidden' )     
 }
 
 useEffect(() => {
@@ -37,14 +39,6 @@ useEffect(() => {
   })
   setPages( updatePages )
 }, [path])
-
-useEffect(() => {
-  if( btnRef.current.className.includes('hidden') ) {
-    btnRef.current.classList.remove('hidden')
-  } else {
-    btnRef.current.classList.add('hidden')
-  }
-}, [menu])
 
 const className = path => {
   if(path === '/' ) {
@@ -70,7 +64,7 @@ const showPages = pages.map((page, idx) =>
         <Navbar 
           menu={menu}
           toggleNav={toggleNav}
-          btnRef={btnRef}
+          displayNav={displayNav}
         />
         { showPages }   
         <SocialLinks />

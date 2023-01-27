@@ -10,7 +10,7 @@ export default function Projects() {
                 <h1 className='py-4 text-2xl text-zinc-700 font-extrabold lg:text-3xl'>{project.name}</h1>
                 <p className='text md:container pb-8'>{project.description}</p>
 
-                <div className=''>
+                <div>
                     {project.live.length > 0 && 
                         <a href={`${project.live}`} target='_blank'
                             className='linkCode hover:text-gray-700 mr-5 ' 

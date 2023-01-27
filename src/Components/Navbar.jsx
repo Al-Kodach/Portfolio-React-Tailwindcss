@@ -17,7 +17,7 @@ export default function Navbar(props) {
             </div>
 
             <div className=" text-right">
-                <button className='md:hidden' onClick={props.toggleNav}>
+                <button className='md:hidden transform hover:scale-y-125' onClick={props.toggleNav}>
                     {props.menu == 'close' ? 
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
                             <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 5.25h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5" />
@@ -29,7 +29,7 @@ export default function Navbar(props) {
                     }
                 </button>
 
-                <nav ref={props.btnRef} className='hidden md:block'>
+                <nav className={`${props.displayNav} md:block`}>
                     <ul className=' grid grid-flow-row gap-5 md:grid-flow-col md:gap-8'>
                         <li className='svg '>
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
