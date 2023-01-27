@@ -1,0 +1,54 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.header {
+    @apply bg-white py-6 px-5 uppercase font-bold;
+    
+}
+
+.list {
+    @apply cursor-pointer lg:text-2xl ml-1;
+    @apply transition ease-out duration-500 hover:underline;
+}
+
+.svg {
+    @apply flex items-center hover:text-blue-500;
+}
+
+.container {
+    @apply flex flex-col;
+    @apply max-w-screen-md m-auto ;
+    @apply px-5 py-16 ;
+}
+
+.text {
+    @apply max-w-screen-sm md:max-w-screen-lg text-lg sm:text-sm md:text-lg lg:text-3xl;
+}
+
+.title {
+    @apply uppercase font-extrabold text-3xl text-center lg:text-4xl;
+}
+
+.skill {
+    @apply px-2 py-2 rounded-md bg-gray-200 text-sm font-bold lg:text-xl md:text-base ;
+}
+
+.gridContainer {
+    @apply grid grid-cols-3 gap-2;
+}
+
+.contact {
+    @apply font-mono underline font-bold px-2 rounded-sm tracking-wider ;
+
+}
+
+.socail {
+    @apply tracking-widest font-bold
+        transform hover:text-blue-500
+        transition ease-in-out duration-500
+}
+
+.linkCode {
+    @apply rounded-lg bg-blue-500 text-gray-100 py-3 px-8 uppercase tracking-widest font-bold lg:text-lg;
+}
