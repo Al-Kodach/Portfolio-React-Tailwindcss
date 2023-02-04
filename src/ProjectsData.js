@@ -18,7 +18,7 @@ const projects = [
         img: "/assets/password.jpg",
         description: "An app that generates random passwords based on a few user inputs, e.g. length, types of characters, etc. Built with HTML, CSS, and vanilla JavaScript.",
         live: '',
-        code: ''
+        code: 'https://github.com/Al-Kodach/password-generator'
     },
     {
         name: "Meme Generator",
