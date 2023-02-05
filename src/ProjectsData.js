@@ -17,7 +17,7 @@ const projects = [
         name: "Password Generator",
         img: "/assets/password.jpg",
         description: "An app that generates random passwords based on a few user inputs, e.g. length, types of characters, etc. Built with HTML, CSS, and vanilla JavaScript.",
-        live: '',
+        live: 'https://alkodach-passwordgenerator.netlify.app/',
         code: 'https://github.com/Al-Kodach/password-generator'
     },
     {
